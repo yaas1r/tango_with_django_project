@@ -85,6 +85,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tango_with_django_project.wsgi.application'
 
 
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    )
+
+
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
@@ -128,6 +134,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+
+LOGIN_URL = '/rango/login/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
